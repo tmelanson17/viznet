@@ -1,0 +1,39 @@
+<!DOCTYPE html>  <!-- HTML5 document type -->
+<html>
+<head>
+  <!-- use go-debug.js when developing and go.js when deploying -->
+  <title></title>
+  <script src="go-debug.js"></script>
+  <script>
+    function load_map_div() {
+      var $ = go.GraphObject.make;
+      var myDiagram =
+        $(go.Diagram, "myDiagramDiv",
+          {
+            "undoManager.isEnabled": true // enable Ctrl-Z to undo and Ctrl-Y to redo
+          });
+
+      var myModel = $(go.Model);
+      // in the model data, each node is represented by a JavaScript object:
+      myModel.nodeDataArray = [
+        { key: "Alpha" },
+        { key: "Beta" },
+        { key: "Gamma" }
+      ];
+      myDiagram.model = myModel;  
+    }
+
+
+  </script>
+</head>
+
+<body onload="load_map_div()">
+
+  <!-- The DIV for a Diagram needs an explicit size or else we will not see anything.
+       In this case we also add a background color so we can see that area. -->
+  <div id="myDiagramDiv"
+       style="width:400px; height:150px; background-color: #DAE4E4;"></div>
+      
+
+</body>
+</html>
