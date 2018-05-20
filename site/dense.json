@@ -1,0 +1,14 @@
+{
+  "$ref": "basic_layer.json",
+  "title": "Dense",
+  "properties": {
+    "name": {
+      "type": "string",
+      "readOnly": true,
+      "default": "Dense"
+    },
+    "units": {
+      "type": "integer"
+    }
+  }
+}

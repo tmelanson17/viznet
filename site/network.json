@@ -1,0 +1,55 @@
+{
+  "title": "Network",
+  "type": "object",
+  "id": "network",
+  "properties": {
+    "input_shape": {
+      "type": "array",
+      "format": "table",
+      "title": "Input Shape",
+      "items": {
+        "type": "integer",
+        "title": "dim"
+      }
+    },
+    "batch_size": {
+      "type": "integer",
+      "title": "Batch Size",
+      "default": 128
+    },
+    "dataset_file": {              
+      "type": "string",
+      "title": "Dataset"
+    },
+    "loss": {
+      "type": "string",
+      "default": "sparse_categorical_crossentropy"
+    },
+    "split": {
+      "type": "number",
+      "default": 0.2
+    },
+    "optimizer": {
+      "type": "string",
+      "default": "adam"
+    },
+    "epochs": {
+      "type": "integer",
+      "default": 10
+    },
+    "layers": {
+      "type": "array",
+      "title": "Layers",
+      "format": "tabs",
+      "items": {
+        "title": "Layer",
+        "headerTemplate": "{{i1}} - {{self.name}}",
+        "oneOf": [
+          {
+            "$ref": "dense.json"
+          }
+        ]
+      }
+    }
+  }
+}

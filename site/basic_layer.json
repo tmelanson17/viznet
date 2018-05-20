@@ -1,0 +1,26 @@
+{
+  "title": "Layer",
+  "type": "object",
+  "id": "layer",
+  "properties": {
+
+    "input": {
+      "type": "integer",
+      "default": 0
+    },
+    "output_shape": {
+      "type": "array",
+      "format": "table",
+      "title": "Output Shape",
+      "items": {
+        "type": "integer",
+        "title": "dim"
+      }
+    }
+  },
+  "required": [
+    "name",
+    "input",
+    "output_shape"
+  ]
+}
