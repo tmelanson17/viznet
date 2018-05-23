@@ -16,6 +16,10 @@
         "type": "integer",
         "title": "dim"
       }
+    },
+    "activation": {
+      "type": "string",
+      "default": "relu"
     }
   },
   "required": [
