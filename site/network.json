@@ -17,7 +17,7 @@
       "title": "Batch Size",
       "default": 128
     },
-    "dataset_file": {              
+    "dataset": {              
       "type": "string",
       "title": "Dataset"
     },
