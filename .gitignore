@@ -1,0 +1,8 @@
+
+*.p
+
+\.ipynb_checkpoints/
+
+test_network\.json
+
+first_network\.json
