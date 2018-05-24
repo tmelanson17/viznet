@@ -26,33 +26,6 @@
     <div id='editor_holder'></div>
     
     <script>
-      // This is the starting value for the editor
-      // We will use this to seed the initial editor 
-      // and to provide a "Restore to Default" button.
-      var starting_value = [
-        {
-          name: "John Smith",
-          age: 35,
-          gender: "male",
-          location: {
-            city: "San Francisco",
-            state: "California",
-            citystate: ""
-          },
-          pets: [
-            {
-              name: "Spot",
-              type: "dog",
-              fixed: true
-            },
-            {
-              name: "Whiskers",
-              type: "cat",
-              fixed: false
-            }
-          ]
-        }
-      ];
       
       // Initialize the editor
       var editor = new JSONEditor(document.getElementById('editor_holder'),{
@@ -63,27 +36,9 @@
         schema: {
           $ref: "network.json",
           title: "Neural Network"
-          // type: "array",
-          // title: "People",
-          // format: "tabs",
-          // items: {
-          //   title: "Person",
-          //   headerTemplate: "{{i}} - {{self.name}}",
-          //   oneOf: [
-          //     {
-          //       $ref: "basic_person.json",
-          //       title: "Basic Person"
-          //     },
-          //     {
-          //       $ref: "person.json",
-          //       title: "Complex Person"
-          //     }
-          //   ]
-          // }
         },
         
-        // Seed the form with a starting value
-        startval: starting_value,
+        // Optional -- startval: starting_value
         
         // Disable additional properties
         no_additional_properties: true,
